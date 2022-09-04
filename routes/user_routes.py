@@ -45,6 +45,6 @@ async def create_user(stock: Stock):
     return {"status": "ok", "data": stock}
 
 @user.get('/find-stock-model')
-async def get_user(model: str):
+async def get_user(model: Model):
     stock = stocksEntity(collection.find({"model": model}))
     return {"status": "ok", "data": stock}
