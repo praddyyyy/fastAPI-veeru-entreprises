@@ -5,3 +5,6 @@ class Stock(BaseModel):
     model: str
     description: str
     price: str
+
+class Model(BaseModel):
+    model: str

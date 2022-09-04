@@ -2,10 +2,9 @@ from operator import mod
 from fastapi import APIRouter, Depends, Response, status
 from fastapi.security import HTTPBearer
 from .utils import VerifyToken
-from models.stock_models import Stock
+from models.stock_models import Stock, Model
 from config.db import collection
 from schemas.stock_schemas import stocksEntity
-
 
 token_auth_scheme = HTTPBearer()
 user = APIRouter()
