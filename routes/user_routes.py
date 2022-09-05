@@ -47,4 +47,7 @@ async def create_user(stock: Stock):
 @user.post('/find-stock-model')
 async def get_user(model: Model):
     stock = stocksEntity(collection.find({"model": model.model}))
-    return {"status": "ok", "data": stock}
+    if stock:      
+        return {"status": True, "data": stock}
+    else:
+        return {"status": False, "data": stock}
